@@ -20,8 +20,11 @@ def getUrls(filename):
 
 
 def downloader(link):
-    print(str(link)+"\n")
-    urllib.request.urlretrieve('https://beatconnect.io/b/'+str(link), outputdir + str(link) + ".osz")
+    try:
+        urllib.request.urlretrieve('https://beatconnect.io/b/'+str(link), outputdir + str(link) + ".osz")
+    except urllib.error.HTTPError:
+        print("WARN: Recieved 404")
+        return
     return
 
 

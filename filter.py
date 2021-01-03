@@ -1,8 +1,8 @@
 import json
 import pickle
 
-SRmin = 4.9
-SRmax = 4.95
+SRmin = 4.00
+SRmax = 4.99
 mode = 0
 status = 1
 
